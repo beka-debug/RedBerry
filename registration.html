@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="left">
+            <h3>Redberry Knight Cup</h3>
+            <div class="backimg">
+                <h2>"WHEN YOU SEE A GOOD MOVE, <br> LOOK FOR A BETTER ONE. "</h2>
+                <h4>EMANUEL LASKER</h4>
+            </div>
+        </div>
+        <div class="right">
+            <p>Start Creating Your Account</p>
+            <div class="top">
+            <div class="pages">
+                <div class="first">1</div>
+                <div class="line"></div>
+                <div class="second">2</div>
+            </div>
+            <h1>Personal Information</h1>
+            <span>This is Basic information Fields</span>
+            <form action="#" id="regform">
+                <input required minlength="2" type="text" class="fullname" placeholder="Name">
+                <input required type="email" class="email" placeholder="Email Address">
+                <input required minlength="9" maxlength="9" type="text"  placeholder="number" placeholder="Phone Number" class="phone">
+                <input required type="date" placeholder="Date of Birth" class="bday">
+                <div class="btns">
+                    <button type="button">Back</button>
+                    <button>Next</button>
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+    <script src="registration.js"></script>
+</body>
+<style>
+    input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.btns{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+input{
+    border:none;
+    border-bottom: 1px solid gray;
+    width: 80%;
+    margin-top: 25px;
+    padding: 3px 10px;
+    box-sizing: border-box;
+}
+input:focus{
+    outline:none;
+    border-bottom: 1px solid gray;
+
+}
+    .top{
+        padding: 70px 50px;
+        box-sizing: border-box;
+    }
+    .top h1{
+        margin-top: 50px;
+    }
+    body{
+        margin: 0px;
+    }
+     .main{
+        display: flex;
+    }
+    .left{
+        width: 50%;
+
+    }
+    .left h2{
+        margin:0px;
+        
+    }
+    .left h3{
+        background-color: blueviolet;
+        margin: 0px;
+        padding: 10px 30px;
+    }
+    .right{
+        width: 50%;
+
+    }
+    .backimg{
+        background-image: url(https://media.istockphoto.com/photos/pieces-on-chess-board-for-playing-game-and-strategy-picture-id1273331529?k=20&m=1273331529&s=612x612&w=0&h=RXD-1tOcTgZEG0HxZNwwfiwfaAgATy1p5N7u3htKqac=);
+        background-size: 100% 600px;
+        background-size: cover;
+        height: 600px;
+        padding: 100px;
+        box-sizing: border-box;
+    }p{
+        border-bottom: 1px solid gray;
+        height: 41.6px;
+        margin: 0px;
+        padding: 10px 30px;
+        box-sizing: border-box;
+    }
+    .first,.second{
+        width: 28px;
+        height: 28px;
+        border:1px solid gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .pages{
+        display: flex;
+        align-items: center;
+    }
+    .line{
+        height: 1px;
+        width: 150px;
+        background-color: grey;
+    }
+    .second{
+        background-color: rgb(196, 183, 183);
+        opacity: 0.5;
+    }
+</style>
+</html>
