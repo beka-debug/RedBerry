@@ -23,22 +23,26 @@
                 <div class="line"></div>
                 <div class="second">2</div>
             </div>
-            <h1>Personal Information</h1>
+            <h1>Chess Experience</h1>
             <span>This is Basic information Fields</span>
-            <form action="registration2.html" id="regform">
-                <input required minlength="2" type="text" class="fullname" placeholder="Name">
-                <input required type="email" class="email" placeholder="Email Address">
-                <input required minlength="9" maxlength="9" type="text"  placeholder="number" placeholder="Phone Number" class="phone">
-                <input required type="date" placeholder="Date of Birth" class="bday">
-                <div class="btns">
-                    <button type="button">Back</button>
-                    <button >Next</button>
-                </div>
-            </form>
+            <div class="z">
+                <select name="" id="">\
+                    <option value="#">level of Knowladge</option>
+                    <option value="begginer">Begginer</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="professional">Professional</option>
+                </select>
+                <div class="x">
+                    <span class="choose">Choose your character</span>
+                    <div class="players">
+                      
+                    </div>
+                  </div>
+            </div>
         </div>
         </div>
     </div>
-    <script src="registration.js"></script>
+    <script src="registration2.js"></script>
 </body>
 <style>
     input::-webkit-outer-spin-button,
@@ -46,6 +50,38 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+.x{
+        width: 300px;
+      
+    }
+    img{
+        width: 50px;
+        height: 35px;
+    }
+    .players{
+        position: absolute;
+        visibility: hidden;
+    }
+    select{
+        height: 30px;
+    }
+   .pl{
+
+    padding: 5px;
+    width: 250px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+   }
+   .choose{
+    width: 250px;
+    border:1px solid black;
+    display: inline-block;
+    padding: 5px;
+    box-sizing: border-box;
+   }
 .btns{
     width: 80%;
     display: flex;
@@ -85,6 +121,11 @@ input:focus{
     .left h2{
         margin:0px;
         
+    }
+    .z{
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
     }
     .left h3{
         background-color: blueviolet;
