@@ -1,5 +1,6 @@
 var players = document.querySelector(".players")
 var choose = document.querySelector(".choose")
+var back = document.querySelector(".back")
 fetch('https://chess-tournament-api.devtest.ge/api/grandmasters')
 .then(x=> x.json())
 .then(info=>{
@@ -23,7 +24,16 @@ fetch('https://chess-tournament-api.devtest.ge/api/grandmasters')
     })
   }
 })
-
+var z = localStorage.getItem("truecheck") || "false"
+localStorage.setItem("truecheck",z)
+console.log(localStorage.getItem("truecheck"))
 choose.addEventListener("click",function(){
     players.classList.toggle('players');
 })
+
+back.addEventListener("click",function(){
+  z = "true"
+  localStorage.setItem("truecheck",z)
+  console.log(localStorage.getItem("truecheck"))
+})
+

@@ -25,13 +25,17 @@
             </div>
             <h1>Personal Information</h1>
             <span>This is Basic information Fields</span>
-            <form action="registration2.html" id="regform">
-                <input required minlength="2" type="text" class="fullname" placeholder="Name">
+            <form action="registationpage2.html" id="regform">
+                <input required minlength="2" type="text" class="fullname" placeholder="Name*">
+                <img class="chk" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eo_circle_green_checkmark.svg/2048px-Eo_circle_green_checkmark.svg.png" alt="">
                 <input required type="email" class="email" placeholder="Email Address">
-                <input required minlength="9" maxlength="9" type="text"  placeholder="number" placeholder="Phone Number" class="phone">
+                <img class="chk" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eo_circle_green_checkmark.svg/2048px-Eo_circle_green_checkmark.svg.png" alt="">
+                <input required minlength="9" maxlength="9" type="number"  placeholder="number" placeholder="Phone Number" class="phone">
+                <img class="chk" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eo_circle_green_checkmark.svg/2048px-Eo_circle_green_checkmark.svg.png" alt="">
                 <input required type="date" placeholder="Date of Birth" class="bday">
+                <img class="chk" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eo_circle_green_checkmark.svg/2048px-Eo_circle_green_checkmark.svg.png" alt="">
                 <div class="btns">
-                    <button type="button">Back</button>
+                    <button type="button"><a href="index.html">Back</a></button>
                     <button >Next</button>
                 </div>
             </form>
@@ -45,6 +49,14 @@
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+.chk{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    margin-top: 25px;
+    visibility: hidden;
+    margin-left: -20px;
 }
 .btns{
     width: 80%;

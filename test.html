@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <input type="text" placeholder="firstname">
+    <span>*</span>
+</div>
+<div>
+    <input type="text" placeholder="firstname">
+    <span>*</span>
+</div>
+</body>
+<style>
+    input{
+      position: absolute;
+    }
+    span{
+        position: relative;
+        margin-top: 5px;
+        display: inline-block;
+        margin-left: 60px;
+        color:red
+    }
+</style>
+<script>
+    var inp = document.querySelector("input")
+    var sp = document.querySelector("span")
+    inp.addEventListener("keyup", function(){
+        if(inp.value.length != 0){
+        sp.style.visibility = "hidden"
+        console.log("aa")
+    }
+    else{
+        sp.style.visibility = "visible"
+    }
+    })
+</script>
+</html>

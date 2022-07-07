@@ -3,6 +3,7 @@ let fullname = document.querySelector(".fullname")
 let email = document.querySelector(".email")
 let bday = document.querySelector(".bday")
 let phone = document.querySelector(".phone")
+var allchks = document.querySelectorAll(".chk")
 
 
 class Person{
@@ -28,7 +29,21 @@ myform.addEventListener("submit", function(e) {
     else{
         //თუ ვალდიდაცი გაირა შეიქმენბა ახალი ობიექტი
         //თუ ახალი ობიექტი შეიქმნა დაემატება მასივში და შეინახება ლოკალში
-        
+        // for(var i of allchks){
+        //     i.style.visibility = "visible"
+        // }
+       
     }
     
 })
+
+var z = localStorage.getItem("truecheck") || "false"
+window.onload = function(){
+    if(localStorage.getItem("truecheck")=="true"){
+        for(var i of allchks){
+             i.style.visibility = "visible"
+            }
+    }
+    console.log(localStorage.getItem("truecheck"))
+}
+
