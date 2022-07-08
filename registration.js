@@ -5,7 +5,14 @@ let bday = document.querySelector(".bday")
 let phone = document.querySelector(".phone")
 let allchks = document.querySelectorAll(".chk")
 let back = document.querySelector(".back")
-var redemail = document.querySelector(".redemail")
+let redemail = document.querySelector(".redemail")
+let localname = ""
+
+fullname.addEventListener("keyup",function(e){
+    localname = fullname.value
+    console.log(localname)
+    localStorage.setItem("localname",localname)
+})
 
 
 
@@ -63,6 +70,7 @@ window.onload = function(){
        phone.value = registedPerson.phone
        bday.value = registedPerson.bday
     }
+    fullname.value = localStorage.getItem("localname")
 }
 
 back.addEventListener("click",function(){
