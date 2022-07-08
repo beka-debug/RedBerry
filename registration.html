@@ -25,17 +25,18 @@
             </div>
             <h1>Personal Information</h1>
             <span>This is Basic information Fields</span>
+            <span class="redemail">this is nor redbbery email</span>
             <form action="registationpage2.html" id="regform">
-                <input required minlength="2" type="text" class="fullname" placeholder="Name*">
-                <img class="chk" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eo_circle_green_checkmark.svg/2048px-Eo_circle_green_checkmark.svg.png" alt="">
+                <input required minlength="2" type="text" class="fullname " placeholder="Name* ">
+                <img class="chk" src="mic.png" alt="">
                 <input required type="email" class="email" placeholder="Email Address">
                 <img class="chk" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eo_circle_green_checkmark.svg/2048px-Eo_circle_green_checkmark.svg.png" alt="">
                 <input required minlength="9" maxlength="9" type="number"  placeholder="number" placeholder="Phone Number" class="phone">
                 <img class="chk" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eo_circle_green_checkmark.svg/2048px-Eo_circle_green_checkmark.svg.png" alt="">
-                <input required type="date" placeholder="Date of Birth" class="bday">
-                <img class="chk" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eo_circle_green_checkmark.svg/2048px-Eo_circle_green_checkmark.svg.png" alt="">
+                <input required type="date"  placeholder="Date of Birth" class="bday" >
+                <img class="chk" src="mic.png" alt="">
                 <div class="btns">
-                    <button type="button"><a href="index.html">Back</a></button>
+                    <button type="button"><a href="index.html" class="back">Back</a></button>
                     <button >Next</button>
                 </div>
             </form>
@@ -50,13 +51,24 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+.redemail{
+    visibility: hidden;
+    transition: 0.5s;
+    opacity: 0;
+    color:red;
+}
 .chk{
     width: 15px;
     height: 15px;
     position: absolute;
-    margin-top: 25px;
+    margin-top: 28px;
     visibility: hidden;
-    margin-left: -20px;
+    margin-left: -25px;
 }
 .btns{
     width: 80%;
