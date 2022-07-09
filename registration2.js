@@ -1,6 +1,9 @@
-var players = document.querySelector(".players")
-var choose = document.querySelector(".choose")
-var back = document.querySelector(".back")
+let players = document.querySelector(".players")
+let choose = document.querySelector(".choose")
+let back = document.querySelector(".back")
+let done = document.querySelector(".done")
+let level = document.querySelector(".level")
+var personid = 200
 fetch('https://chess-tournament-api.devtest.ge/api/grandmasters')
 .then(x=> x.json())
 .then(info=>{
@@ -15,12 +18,14 @@ fetch('https://chess-tournament-api.devtest.ge/api/grandmasters')
         players.innerHTML += tmp
    
     }
+
     var allplayers = document.querySelectorAll(".pl")
     for(var i of allplayers){
     i.addEventListener("click",function(){
       choose.innerText = this.children[0].innerText
-      players.classList.toggle('players');
-    
+      players.classList.toggle('players'); 
+      personid = ([...allplayers].indexOf(this)+1)
+        
     })
   }
 })
@@ -36,4 +41,33 @@ back.addEventListener("click",function(){
   localStorage.setItem("truecheck",z)
   console.log(localStorage.getItem("truecheck"))
 })
+done.addEventListener("click",function(){
+  var registedPerson = JSON.parse(localStorage.getItem("myobject"))
+  var newobj = {
+     name:registedPerson.fullname,
+     email:registedPerson.email,
+     phone:registedPerson.phone,
+     date_of_birth:registedPerson.bday,
+     experience_level:level.value,
+     already_participated:true,
+     character_id:personid
+   
+  }
+  
 
+  // var xhr = new XMLHttpRequest();
+  // xhr.open("POST", 'https://chess-tournament-api.devtest.ge/api/register', true);
+  // xhr.setRequestHeader('Content-Type', 'application/json');
+  // xhr.send(JSON.stringify(newobj));
+  // console.log(newobj)
+  // console.log(personid)
+
+  fetch("https://chess-tournament-api.devtest.ge/api/register", {
+    method: "POST",
+    headers: {'Content-Type': 'application/json'}, 
+    body: JSON.stringify(newobj)
+    
+  }).then(res => {
+    console.log("Request complete! response:", res);
+  });
+})
